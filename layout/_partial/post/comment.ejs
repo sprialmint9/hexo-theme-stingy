@@ -1,0 +1,11 @@
+  <% if(theme.duoshuo){ %>
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: '<%= theme.duoshuo_appid %>',
+      conf: 'prod_90e14c3a23c5affbdc41d63c4a438a30'
+    });
+
+  </script>
+   <% } %>

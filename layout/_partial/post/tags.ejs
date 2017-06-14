@@ -1,0 +1,9 @@
+
+<%
+  var postTags = [];
+  tags.forEach(function(tag){
+    postTags.push('<span class="tag">' + tag.name + '</span>');
+  });
+%>
+
+<%- postTags.join(' ') %>

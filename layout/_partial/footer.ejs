@@ -1,0 +1,16 @@
+
+<footer>
+    <div>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+  powered_by &nbsp;<a href="http://hexo.io/" target="_blank">Hexo</a></div>
+    <%- partial('_partial/footer-nav', null, {cache: !config.relative_link}) %>
+</footer>
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/103139/41601/59262715f629d8137c241a98.css' rel='stylesheet' type='text/css' />
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/103139/46865/5926282bf629d8137c241a9a.css' rel='stylesheet' type='text/css' />
+<script src="https://cdn.bootcss.com/jquery/2.0.3/jquery.js"></script>
+<% if (theme.fancybox){ %>
+  <%- css('fancybox/jquery.fancybox') %>
+  <%- js('fancybox/jquery.fancybox.pack') %>
+<% } %>
+<%- js('js/script') %>
+  
+<div id="backtotop" class="animited pullback"><em></em><i></i><span>BACK<br>TO<br>TO<br>TOP</span></div>

@@ -1,0 +1,27 @@
+ <% page.posts.each(function(post, i){ %>
+ <section>
+    <summary class="title"><a href="<%- post.path -%>"><%- post.title -%></a></summary>
+    <div class="date"><%- date(post.date, 'ddd YYYY-MM-DD HH:mm') %></div>
+    <% if(post.photos.length != 0 && post.photos != undefined ) { %>
+    <div class="preview">
+<img src="<%- post.photos[0] -%>" alt="">
+    </div>
+    <% } %>
+    <p class="sub">
+        <%- post.excerpt -%>
+    </p>
+    <div class="tags">
+      <% if (post.tags && post.tags.length) { %>
+      <%- partial('_partial/post/tags', {tags: post.tags}) %>
+      <% }  %>
+    </div>
+</section>
+ <% }) %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <%- paginator({
+      prev_text: "&laquo; __('prev')",
+      next_text: "__('next') &raquo;"
+    }) %>
+  </nav>
+<% } %>
