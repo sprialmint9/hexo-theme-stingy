@@ -8,10 +8,15 @@
   <p class="sub">
     <%- post.content -%>
   </p>
-  <div class="tags">
-    <% if (post.tags && post.tags.length) { %>
-      <%- partial('post/tags', {tags: post.tags}) %>
-        <% } %>
+  <div class="clearfix"> 
+    <div class="tags pull-left">
+      <% if (post.tags && post.tags.length) { %>
+        <%- partial('post/tags', {tags: post.tags}) %>
+          <% } %>
+    </div>
+    <div class="share pull-right">
+      <%- partial('post/share') %>
+    </div>
   </div>
   <%- partial('post/license',{at_path: page.permalink}) %>
   <%- partial('post/comment') %>

@@ -30,3 +30,5 @@ show_count: false
 favicon: /favicon.png
 duoshuo: true
 duoshuo_appid: 'cyt3kgXme'
+baidu_share: true
+baidu_tongji: true
