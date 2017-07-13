@@ -1,25 +1,28 @@
 <section class="archive">
     <summary class="title">Archive</summary>
     <dl>
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
-    <% var year = post.date.year(); %>
-    <% if (last != year){ %>
-      <% if (last != null){ %>
-        </div></section>
-      <% } %>
-      <% last = year; %>
-          <dt><a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a></dt>
-    <% } %>
-    <dd><span><%- date(post.date, 'MM-DD') %></span><a href="<%- url_for(post.path) %>" target="_blank" itemprop="url"><%= post.title %></a></dd>
-  <% }) %>
-      </dl>
+        <% var last; %>
+            <% page.posts.each(function(post, i){ %>
+                <% var year = post.date.year(); %>
+                    <% if (last != year){ %>
+                        <% if (last != null){ %>
+                            <% } %>
+                                <% last = year; %>
+                                    <dt><a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a></dt>
+                                    <% } %>
+                                        <dd><span><%- date(post.date, 'MM-DD') %></span>
+                                            <a href="<%- url_for(post.path) %>" target="_blank" itemprop="url">
+                                                <%= post.title %>
+                                            </a>
+                                        </dd>
+                                        <% }) %>
+    </dl>
 </section>
 <% if (page.total > 1){ %>
-  <nav id="page-nav">
-    <%- paginator({
+    <nav id="page-nav">
+        <%- paginator({
       prev_text: "&laquo; __('prev')",
       next_text: "__('next') &raquo;"
     }) %>
-  </nav>
-<% } %>
+    </nav>
+    <% } %>
