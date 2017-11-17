@@ -19,10 +19,10 @@
     </dl>
 </section>
 <% if (page.total > 1){ %>
-    <nav id="page-nav">
+    <nav id="page-nav" class="page-nav">
         <%- paginator({
-      prev_text: "&laquo; __('prev')",
-      next_text: "__('next') &raquo;"
+      prev_text: "&laquo; PREV",
+      next_text: "NEXT &raquo;"
     }) %>
     </nav>
     <% } %>
