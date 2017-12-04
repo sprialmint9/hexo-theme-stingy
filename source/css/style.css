@@ -821,7 +821,9 @@ footer>div {
     margin: .6rem 0;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.62);
 }
-
+.page-nav {
+    margin: 0.9rem 0;
+}
 @media screen and (max-width:800px) {
     body {
         width: 100%;
@@ -1177,9 +1179,7 @@ pre .keyword,
 pre .javascript .function {
     color: #c9c;
 }
-.page-nav {
-    margin: 0.9rem 0;
-}
+
 .page-nav .page-number,.page-nav .extend {
     background-color: #fff;
     margin: 0 .4rem 0 0;
