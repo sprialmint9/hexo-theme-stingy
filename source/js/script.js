@@ -14,6 +14,9 @@ $(function () {
       }
     }
   });
+  setTimeout(function(){
+    $(".header-bg").addClass("active");
+  },1000);
   $('#backtotop').click(function () {
     scrolling = true;
     $('html, body').animate({
@@ -35,4 +38,15 @@ $(function () {
     }
     nav_toggle = !nav_toggle;
   });
+  var items = document.querySelectorAll('section');
+  show(0);
+  function show(index) {
+      if (index >= items.length) {
+          return;
+      }
+      setTimeout(function() {
+          items[index].classList.add('active');
+          show(index + 1);
+      }, 100);
+  }
 });
