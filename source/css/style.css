@@ -878,6 +878,10 @@ footer>div {
         border-radius: 2px;
         box-shadow: none;
     }
+    .n-show {
+        height: 190px !important;
+        transition: all .25s ease 0s;
+    }
     .tags a {
         font-weight: 600;
         font-size: 1.1rem;

@@ -10,6 +10,7 @@ $(function () {
       } else {
         $("#backtotop").addClass('pullback').removeClass('pullTop');
         $("#header").removeClass('static-top pullTop');
+        $("#header nav").removeClass('n-show');
         $("#article").css({ 'margin-top': 0 });
       }
     }
