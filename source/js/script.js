@@ -16,6 +16,7 @@ $(function () {
     }
   });
   setTimeout(function(){
+    return;
     $(".header-bg").addClass("active");
   },1000);
   $('#backtotop').click(function () {
