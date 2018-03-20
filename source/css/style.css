@@ -814,6 +814,11 @@ footer {
 footer>div {
     display: flex;
 }
+iframe {
+    border-radius: 3px;
+    border: 1px #f1f1f1 solid;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, .2);
+}
 
 .footer-menu a:hover {
     text-decoration: none;
