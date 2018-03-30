@@ -28,7 +28,9 @@ show_count: false
 
 # Miscellaneous
 favicon: /favicon.ico
-duoshuo: true
+duoshuo: false
 duoshuo_appid: 'cyt3kgXme'
+livere: true
+livere_id: 'MTAyMC8zNTAyNC8xMTU2MA=='
 baidu_share: true
 baidu_tongji: true
